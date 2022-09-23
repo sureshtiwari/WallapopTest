@@ -10,5 +10,5 @@ public interface RoverService {
 
     void moveBackwards(Planet planet, Rover rover);
 
-    void changeDirection(Planet planet, Rover rover, Command marsRoverCommand);
+    void changeDirection(Rover rover, Command marsRoverCommand);
 }

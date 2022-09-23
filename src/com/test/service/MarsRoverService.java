@@ -82,7 +82,7 @@ public class MarsRoverService implements RoverService {
     }
 
     @Override
-    public void changeDirection(Planet planet, Rover rover, Command marsRoverCommand) {
+    public void changeDirection(Rover rover, Command marsRoverCommand) {
         if (marsRoverCommand.code.equals("l")) {
             switch (rover.direction) {
                 case "n":
@@ -97,25 +97,29 @@ public class MarsRoverService implements RoverService {
                 case "e":
                     rover.direction = "n";
                     break;
-                default:logger.debug("Invalid Command");
+                default:
+                    logger.debug("Invalid Command");
             }
-            if (marsRoverCommand.code.equals("r")) {
-                switch (rover.direction) {
-                    case "n":
-                        rover.direction = "e";
-                        break;
-                    case "e":
-                        rover.direction = "s";
-                        break;
-                    case "s":
-                        rover.direction = "w";
-                        break;
-                    case "w":
-                        rover.direction = "n";
-                        break;
-                    default:logger.debug("invalid Command");
-                }
+        }
+        if (marsRoverCommand.code.equals("r")) {
+            switch (rover.direction) {
+                case "n":
+                    rover.direction = "e";
+                    break;
+                case "e":
+                    rover.direction = "s";
+                    break;
+                case "s":
+                    rover.direction = "w";
+                    break;
+                case "w":
+                    rover.direction = "n";
+                    break;
+                default:
+                    logger.debug("invalid Command");
             }
         }
     }
 }
+
+

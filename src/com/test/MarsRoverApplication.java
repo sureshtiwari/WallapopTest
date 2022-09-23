@@ -36,7 +36,7 @@ public class MarsRoverApplication {
                 marsRoverService.moveForward(mars,marsRover);
             if (command.code.equals("b"))
                 marsRoverService.moveBackwards(mars,marsRover);
-            marsRoverService.changeDirection(mars,marsRover,command);
+            marsRoverService.changeDirection(marsRover,command);
             System.out.println(String.format("Rover is at x:%d y:%d facing:%s", marsRover.x, marsRover.y, marsRover.direction));
         } while (true);
     }
