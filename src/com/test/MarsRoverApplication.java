@@ -32,11 +32,12 @@ public class MarsRoverApplication {
             System.out.println("Would you like to add Obstacles : y for yes , n for No");
             choice = reader.next();
             if (choice.equals("y")) {
-                Position position = new Position();
+
                 System.out.println("Enter Obstacles x Coordinate : ");
-                position.x = reader.nextInt();
+                int x = reader.nextInt();
                 System.out.println("Enter Obstacles y Coordinate : ");
-                position.y = reader.nextInt();
+                int y = reader.nextInt();
+                Position position = new Position(x,y);
                 if (position.validatePosition(mars))
                     mars.obstacles.add(position);
                 else {

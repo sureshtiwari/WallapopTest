@@ -19,8 +19,8 @@ public class MarsRoverServiceTest {
         mars.breadth=7;
         marsRoverService=new MarsRoverService();
         marsRover = new MarsRover();
-        marsRover.x=0;
-        marsRover.y=0;
+        marsRover.roverPosition.x=0;
+        marsRover.roverPosition.y=0;
         marsRover.direction="n";
     }
 
@@ -28,16 +28,16 @@ public class MarsRoverServiceTest {
     public void moveForwardTest()
     {
         marsRoverService.moveForward(mars,marsRover);
-        Assertions.assertEquals(marsRover.x,0);
-        Assertions.assertEquals(marsRover.y,1);
+        Assertions.assertEquals(marsRover.roverPosition.x,0);
+        Assertions.assertEquals(marsRover.roverPosition.y,1);
     }
 
     @Test
     public void moveBackwardsTest()
     {
         marsRoverService.moveBackwards(mars,marsRover);
-        Assertions.assertEquals(marsRover.x,0);
-        Assertions.assertEquals(marsRover.y,6);
+        Assertions.assertEquals(marsRover.roverPosition.x,0);
+        Assertions.assertEquals(marsRover.roverPosition.y,6);
     }
 
     @Test
