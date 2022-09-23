@@ -1,5 +1,8 @@
 package com.test;
 
+import com.test.entities.*;
+import com.test.service.MarsRoverService;
+import com.test.service.RoverService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

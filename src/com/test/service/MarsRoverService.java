@@ -1,5 +1,8 @@
-package com.test;
+package com.test.service;
 
+import com.test.entities.Command;
+import com.test.entities.Planet;
+import com.test.entities.Rover;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
