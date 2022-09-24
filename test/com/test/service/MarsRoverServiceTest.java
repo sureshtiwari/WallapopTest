@@ -5,6 +5,8 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
+
 public class MarsRoverServiceTest {
 
     private Planet mars;
@@ -17,10 +19,12 @@ public class MarsRoverServiceTest {
         mars= new Mars();
         mars.length=7;
         mars.breadth=7;
+        mars.obstacles = new ArrayList<>();
+        mars.obstacles.add(new Position(1,1));
         marsRoverService=new MarsRoverService();
         marsRover = new MarsRover();
-        marsRover.roverPosition.x=0;
-        marsRover.roverPosition.y=0;
+        Position position = new Position(0,0);
+        marsRover.roverPosition=position;
         marsRover.direction="n";
     }
 
